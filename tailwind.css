@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  .customInset {
+    inset: 0 0 0 30%;
+  }
+}
+
+@layer components {
+  .mobile-nav-toggle[aria-expanded="true"] {
+    @apply bg-hamburgerClose;
+  }
+}
+
+@layer components {
+  .primary-navigation[data-visible="true"] {
+    transform: translateX(0%);
+  }
+}

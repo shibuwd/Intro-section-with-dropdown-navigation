@@ -1,0 +1,31 @@
+{
+  "name": "intro-section-with-dropdown-navigation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i tailwind.css -o ./src/css/style.css --watch",
+    "pro": "npx tailwindcss -i tailwind.css -o ./src/css/style.css --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.0",
+    "@tailwindcss/typography": "^0.5.1",
+    "autoprefixer": "^10.4.4",
+    "postcss": "^8.4.12",
+    "tailwindcss": "^3.0.24"
+  },
+  "dependencies": {
+    "@tailwindcss/forms": "^0.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shibuwd/Intro-section-with-dropdown-navigation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shibuwd/Intro-section-with-dropdown-navigation/issues"
+  },
+  "homepage": "https://github.com/shibuwd/Intro-section-with-dropdown-navigation/shibuwd/tailwind-css-boiler-plate#readme",
+  "description": "![Design preview for the Intro section with dropdown navigation coding challenge](./design/desktop-preview.jpg)"
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../src/img/favicon-32x32.png"
+        type="image/x-icon">
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+</head>
+
+<body">
+
+    <!-- navbar section -->
+    <header class="primary-header flex items-center justify-between py-[1rem]">
+        <div>
+            <a href="./index.html"><img src="./img/logo.svg" alt="Snap logo"
+                    class="logo pl-4">
+            </a>
+        </div>
+
+        <button class="mobile-nav-toggle block absolute z-[9999] bg-transparent bg-hamburger
+        bg-no-repeat border-none w-[1.8rem] aspect-square top-6  right-5 
+        sm:hidden sm:z-[9999]
+        
+        " aria-controls="primary-navigation " aria-expanded="false">
+
+            <span class="sr-only">menu</span>
+        </button>
+
+        <nav>
+            <ul id="primary-navigation" data-visible="false" class="primary-navigation 
+            flex flex-col bg-almostWhite text-almostBlack 
+
+                sm:flex-col smMax:gap-8 smMax:fixed smMax:z-[10]
+                smMax:customInset smMax:pt-[45%] smMax:pl-[8%]
+                smMax:translate-x-full smMax:duration-700 smMax:ease-in-out
+                
+                sm:gap-[2.5rem] sm:p-[1.5rem] sm:px-10">
+
+                <li class="active">
+                    <a href="#" class=" relative font-Epilogue font-fw500 text-v4 outline-none
+                    sm:navHover">
+                        <span" aria-hidden="true"></span>Features
+                    </a>
+                </li>
+
+                <li>
+                    <a href="$" class=" relative font-Epilogue
+                      font-fw500 text-v4 outline-none 
+                     sm:navHover">
+                        <span" aria-hidden="true"></span>Company
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class=" relative font-Epilogue
+                     font-fw500 text-v11 outline-none 
+                     sm:navHover">
+                        <span" aria-hidden="true"></span>Careers
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class=" relative font-Epilogue
+                    font-fw500 text-v4 outline-none
+
+                    sm:navHover">
+                        <span" aria-hidden="true"></span>About
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+    <!--end navbar section -->
+
+
+    <!-- javascript file -->
+    <script src="./js/app.js"></script>
+
+    </body>
+
+</html>
