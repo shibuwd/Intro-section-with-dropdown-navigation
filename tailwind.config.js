@@ -28,8 +28,19 @@ module.exports = {
 			},
 
 			backgroundImage: {
+				//hamburger icons
 				hamburger: "url('../img/icon-menu.svg')",
-				hamburgerClose: "url('../img/icon-close-menu.svg')"
+				hamburgerClose: "url('../img/icon-close-menu.svg')",
+
+				//hamburger icons
+				arrowUp: "url('../img/icon-arrow-up.svg')",
+				arrowDown: "url('../img/icon-arrow-down.svg')",
+
+				// navbar icons
+				todo: "url('../img/icon-todo.svg')",
+				calendar: "url('../img/icon-calendar.svg')",
+				reminders: "url('../img/icon-reminders.svg')",
+				planning: "url('../img/icon-planning.svg')"
 			},
 
 			screens: {

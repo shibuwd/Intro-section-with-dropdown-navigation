@@ -13,50 +13,119 @@
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
 </head>
 
-<body">
+<body>
 
-    <!-- navbar section -->
+    <!-- header section -->
     <header class="primary-header flex items-center justify-between py-[1rem]">
+        <!-- navbar logo -->
+
         <div>
             <a href="./index.html"><img src="./img/logo.svg" alt="Snap logo"
                     class="logo pl-4">
             </a>
         </div>
+        <!-- end navbar logo -->
 
+        <!-- hamburger -->
         <button class="mobile-nav-toggle block absolute z-[9999] bg-transparent bg-hamburger
         bg-no-repeat border-none w-[1.8rem] aspect-square top-6  right-5 
-        sm:hidden sm:z-[9999]
-        
-        " aria-controls="primary-navigation " aria-expanded="false">
+        sm:hidden sm:z-[9999]" aria-controls="primary-navigation"
+            aria-expanded="false">
 
             <span class="sr-only">menu</span>
         </button>
+        <!-- end hamburger -->
 
+        <!-- navbar start -->
         <nav>
             <ul id="primary-navigation" data-visible="false" class="primary-navigation 
             flex flex-col bg-almostWhite text-almostBlack 
 
-                sm:flex-col smMax:gap-8 smMax:fixed smMax:z-[10]
-                smMax:customInset smMax:pt-[45%] smMax:pl-[8%]
+                sm:flex-col smMax:gap-6 smMax:fixed smMax:z-[10]
+                smMax:customInset smMax:pt-[25%] smMax:pl-[8%]
                 smMax:translate-x-full smMax:duration-700 smMax:ease-in-out
                 
                 sm:gap-[2.5rem] sm:p-[1.5rem] sm:px-10">
 
+                <!-- features menu -->
                 <li class="active">
                     <a href="#" class=" relative font-Epilogue font-fw500 text-v4 outline-none
                     sm:navHover">
-                        <span" aria-hidden="true"></span>Features
+                        <div>
+                            <span class="flex items-center gap-4"
+                                aria-hidden="true">Features
+                                <img src="./img/icon-arrow-up.svg" alt="">
+                            </span>
+
+                            <!-- dropdown menus with icon -->
+                            <div>
+                                <ul class="ml-7">
+                                    <li
+                                        class="bg-todo bg-no-repeat bg-contain pl-10 my-5 capitalize">
+                                        <a href="#">todo list
+                                        </a>
+                                    </li>
+
+                                    <li
+                                        class="bg-calendar bg-no-repeat bg-contain pl-10 my-5 capitalize ">
+                                        <a href="#">calendar
+                                        </a>
+                                    </li>
+
+                                    <li
+                                        class="bg-reminders bg-no-repeat bg-contain pl-10 my-5 capitalize ">
+                                        <a href="#">reminders
+                                        </a>
+                                    </li>
+
+                                    <li
+                                        class="bg-planning bg-no-repeat bg-contain pl-10 my-5 capitalize ">
+                                        <a href="#">planning
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- end dropdown menus with icon-->
+                        </div>
                     </a>
                 </li>
+                <!-- end feature menu -->
 
+                <!-- company menu -->
                 <li>
-                    <a href="$" class=" relative font-Epilogue
+                    <a href="#" class=" relative font-Epilogue
                       font-fw500 text-v4 outline-none 
                      sm:navHover">
-                        <span" aria-hidden="true"></span>Company
+                        <span class="flex items-center gap-4"
+                            aria-hidden="true">Company
+                            <img src="./img/icon-arrow-up.svg" alt="">
+                        </span>
+
+                        <!-- dropdown menus without icon -->
+                        <div>
+                            <ul class="ml-7">
+                                <li class=" pl-3 my-5 capitalize">
+                                    <a href="#"> history
+                                    </a>
+                                </li>
+
+                                <li class=" pl-3 my-5 capitalize ">
+                                    <a href="#">our team
+                                    </a>
+                                </li>
+
+                                <li class=" pl-3 my-5 capitalize ">
+                                    <a href="#">blog
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- end dropdown menus without icon -->
                     </a>
                 </li>
+                <!-- end company menu -->
 
+                <!-- careers menu -->
                 <li>
                     <a href="#" class=" relative font-Epilogue
                      font-fw500 text-v11 outline-none 
@@ -64,7 +133,9 @@
                         <span" aria-hidden="true"></span>Careers
                     </a>
                 </li>
+                <!-- end careers menu -->
 
+                <!-- about menu -->
                 <li>
                     <a href="#" class=" relative font-Epilogue
                     font-fw500 text-v4 outline-none
@@ -73,16 +144,17 @@
                         <span" aria-hidden="true"></span>About
                     </a>
                 </li>
+                <!-- end about menu -->
             </ul>
         </nav>
-
+        <!-- navbar end -->
     </header>
-    <!--end navbar section -->
+    <!--end header section -->
 
 
     <!-- javascript file -->
     <script src="./js/app.js"></script>
 
-    </body>
+</body>
 
 </html>
