@@ -12,3 +12,8 @@ navToggle.addEventListener('click', () => {
 		navToggle.setAttribute('aria-expanded', false);
 	}
 });
+
+let dropdown = document.querySelector('.dropdown');
+let arrow = document.querySelector('.arrow');
+
+console.log(dropdown);

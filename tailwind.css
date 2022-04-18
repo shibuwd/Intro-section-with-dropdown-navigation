@@ -20,3 +20,9 @@
     transform: translateX(0%);
   }
 }
+
+/* @layer components {
+  .arrow-active {
+    transform: scaleY(-1);
+  }
+} */

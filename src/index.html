@@ -13,52 +13,60 @@
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
 </head>
 
-<body>
+<body class="bg-almostWhite">
 
     <!-- header section -->
-    <header class="primary-header flex items-center justify-between py-[1rem]">
-        <!-- navbar logo -->
-
-        <div>
-            <a href="./index.html"><img src="./img/logo.svg" alt="Snap logo"
-                    class="logo pl-4">
-            </a>
-        </div>
-        <!-- end navbar logo -->
-
-        <!-- hamburger -->
-        <button class="mobile-nav-toggle block absolute z-[9999] bg-transparent bg-hamburger
-        bg-no-repeat border-none w-[1.8rem] aspect-square top-6  right-5 
-        sm:hidden sm:z-[9999]" aria-controls="primary-navigation"
-            aria-expanded="false">
-
-            <span class="sr-only">menu</span>
-        </button>
-        <!-- end hamburger -->
+    <header id=" primary-header " class=" px-3 ">
 
         <!-- navbar start -->
-        <nav>
-            <ul id="primary-navigation" data-visible="false" class="primary-navigation 
-            flex flex-col bg-almostWhite text-almostBlack 
+        <nav class=" flex items-center justify-between">
 
-                sm:flex-col smMax:gap-6 smMax:fixed smMax:z-[10]
+            <!-- navbar logo -->
+
+            <div id="logo">
+                <a class=" p-6" href=" ./index.html"> <img src="./img/logo.svg"
+                        alt="Snap logo">
+                </a>
+            </div>
+
+            <!-- end navbar logo -->
+
+            <!-- hamburger -->
+            <button class=" mobile-nav-toggle absolute z-[9999] bg-transparent
+                    bg-hamburger bg-no-repeat border-none w-[1.8rem]
+                    aspect-square top-6 right-5 sm:hidden sm:z-[9999]"
+                aria-controls="primary-navigation" aria-expanded="false">
+
+                <span class="sr-only">menu</span>
+            </button>
+            <!-- end hamburger -->
+
+            <ul id="primary-navigation" data-visible="false" class="primary-navigation 
+        
+            flex flex-col bg-almostWhite text-almostBlack shadow-boxShadowNav
+
+                sm:flex-row  smMax:gap-6 smMax:fixed smMax:z-[10]
                 smMax:customInset smMax:pt-[25%] smMax:pl-[8%]
                 smMax:translate-x-full smMax:duration-700 smMax:ease-in-out
                 
-                sm:gap-[2.5rem] sm:p-[1.5rem] sm:px-10">
+                sm:gap-[2.5rem] sm:py-8 sm:shadow-none
+                 lg:mr-[18%]
+                 xl:mr-[28%]
+                 ">
 
                 <!-- features menu -->
                 <li class="active">
                     <a href="#" class=" relative font-Epilogue font-fw500 text-v4 outline-none
                     sm:navHover">
-                        <div>
+                        <div class="dropdown">
                             <span class="flex items-center gap-4"
                                 aria-hidden="true">Features
-                                <img src="./img/icon-arrow-up.svg" alt="">
+                                <img class="arrow" src="./img/icon-arrow-up.svg"
+                                    alt="">
                             </span>
 
                             <!-- dropdown menus with icon -->
-                            <div>
+                            <!-- <div>
                                 <ul class="ml-7">
                                     <li
                                         class="bg-todo bg-no-repeat bg-contain pl-10 my-5 capitalize">
@@ -84,7 +92,7 @@
                                         </a>
                                     </li>
                                 </ul>
-                            </div>
+                            </div> -->
                             <!-- end dropdown menus with icon-->
                         </div>
                     </a>
@@ -93,7 +101,7 @@
 
                 <!-- company menu -->
                 <li>
-                    <a href="#" class=" relative font-Epilogue
+                    <a href="#" class="relative font-Epilogue
                       font-fw500 text-v4 outline-none 
                      sm:navHover">
                         <span class="flex items-center gap-4"
@@ -102,7 +110,7 @@
                         </span>
 
                         <!-- dropdown menus without icon -->
-                        <div>
+                        <!-- <div>
                             <ul class="ml-7">
                                 <li class=" pl-3 my-5 capitalize">
                                     <a href="#"> history
@@ -119,7 +127,7 @@
                                     </a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
                         <!-- end dropdown menus without icon -->
                     </a>
                 </li>
@@ -139,22 +147,36 @@
                 <li>
                     <a href="#" class=" relative font-Epilogue
                     font-fw500 text-v4 outline-none
-
                     sm:navHover">
                         <span" aria-hidden="true"></span>About
                     </a>
                 </li>
                 <!-- end about menu -->
             </ul>
-        </nav>
-        <!-- navbar end -->
+
+            <div class="hidden md:hidden lg:inline-block">
+
+                <button>
+                    <a id="login-btn" class="lg:font-Epilogue lg:text-v3 lg:capitalize
+                    lg:font-fw500 lg:px-5" href="#">login
+                    </a>
+                </button>
+
+                <button <a id="register-btn" class=" lg:font-Epilogue lg:text-v3 lg:capitalize lg:mr-5
+                    lg:font-fw500 lg:bg-almostBlack lg:text-almostWhite
+                    lg:border-solid lg:border-2 lg:border-almostBlack lg:px-8
+                    lg:py-3 lg:rounded-xl lg:cursor-pointer
+                    lg:hover:bg-transparent lg:hover:border-2
+                    lg:hover:text-almostBlack lg:ease-linear lg:duration-500
+                    href="">register
+                </a>
+           </button>
+            </div>
+    </nav>
+    <!-- navbar end -->
     </header>
     <!--end header section -->
 
 
     <!-- javascript file -->
-    <script src="./js/app.js"></script>
-
-</body>
-
-</html>
+    <script src=" ./js/app.js"> </script> </body> </html>

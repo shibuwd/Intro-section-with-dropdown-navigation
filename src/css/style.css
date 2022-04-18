@@ -517,12 +517,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: 1.75rem;
 }
 
-.block {
-  display: block;
-}
-
 .flex {
   display: flex;
+}
+
+.hidden {
+  display: none;
 }
 
 .aspect-square {
@@ -553,13 +553,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-style: none;
 }
 
-.bg-transparent {
-  background-color: transparent;
-}
-
 .bg-almostWhite {
   --tw-bg-opacity: 1;
   background-color: hsl(0 0% 98% / var(--tw-bg-opacity));
+}
+
+.bg-transparent {
+  background-color: transparent;
 }
 
 .bg-hamburger {
@@ -590,13 +590,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-repeat: no-repeat;
 }
 
-.py-\[1rem\] {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+.p-6 {
+  padding: 1.5rem;
 }
 
-.pl-4 {
-  padding-left: 1rem;
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .pl-10 {
@@ -628,10 +628,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: hsl(0 0% 8% / var(--tw-text-opacity));
 }
 
+.shadow-boxShadowNav {
+  --tw-shadow: 17px 6px 22px 7px rgba(0,0,0,0.4);
+  --tw-shadow-colored: 17px 6px 22px 7px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
+
+/* @layer components {
+  .arrow-active {
+    transform: scaleY(-1);
+  }
+} */
 
 @media (min-width: 640px) {
   .sm\:z-\[9999\] {
@@ -642,21 +654,150 @@ Ensure the default browser behavior of the `hidden` attribute.
     display: none;
   }
 
-  .sm\:flex-col {
-    flex-direction: column;
+  .sm\:flex-row {
+    flex-direction: row;
   }
 
   .sm\:gap-\[2\.5rem\] {
     gap: 2.5rem;
   }
 
-  .sm\:p-\[1\.5rem\] {
-    padding: 1.5rem;
+  .sm\:py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
-  .sm\:px-10 {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+  .sm\:shadow-none {
+    --tw-shadow: 0 0 #0000;
+    --tw-shadow-colored: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:mr-\[18\%\] {
+    margin-right: 18%;
+  }
+
+  .lg\:mr-5 {
+    margin-right: 1.25rem;
+  }
+
+  .lg\:inline-block {
+    display: inline-block;
+  }
+
+  .lg\:cursor-pointer {
+    cursor: pointer;
+  }
+
+  .lg\:rounded-xl {
+    border-radius: 0.75rem;
+  }
+
+  .lg\:border-2 {
+    border-width: 2px;
+  }
+
+  .lg\:border-solid {
+    border-style: solid;
+  }
+
+  .lg\:border-almostBlack {
+    --tw-border-opacity: 1;
+    border-color: hsl(0 0% 8% / var(--tw-border-opacity));
+  }
+
+  .lg\:bg-almostBlack {
+    --tw-bg-opacity: 1;
+    background-color: hsl(0 0% 8% / var(--tw-bg-opacity));
+  }
+
+  .lg\:px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .lg\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .lg\:py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .lg\:font-Epilogue {
+    font-family: Epilogue, sans-serif;
+  }
+
+  .lg\:text-v3 {
+    font-size: 1.125rem;
+  }
+
+  .lg\:font-fw500 {
+    font-weight: 500;
+  }
+
+  .lg\:capitalize {
+    text-transform: capitalize;
+  }
+
+  .lg\:text-almostWhite {
+    --tw-text-opacity: 1;
+    color: hsl(0 0% 98% / var(--tw-text-opacity));
+  }
+
+  .lg\:duration-500 {
+    transition-duration: 500ms;
+  }
+
+  .lg\:ease-in {
+    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+  }
+
+  .lg\:ease-easeOutCirc {
+    transition-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
+  }
+
+  .lg\:ease-navEaseOut {
+    transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);
+  }
+
+  .lg\:ease-linear {
+    transition-timing-function: linear;
+  }
+
+  .lg\:hover\:border-2:hover {
+    border-width: 2px;
+  }
+
+  .lg\:hover\:bg-transparent:hover {
+    background-color: transparent;
+  }
+
+  .lg\:hover\:text-almostBlack:hover {
+    --tw-text-opacity: 1;
+    color: hsl(0 0% 8% / var(--tw-text-opacity));
+  }
+
+  .lg\:hover\:transition-opacity:hover {
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:mr-\[28\%\] {
+    margin-right: 28%;
   }
 }
 

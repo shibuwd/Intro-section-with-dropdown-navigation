@@ -43,11 +43,13 @@ module.exports = {
 				planning: "url('../img/icon-planning.svg')"
 			},
 
-			screens: {
-				smMax: { max: '639px' },
-				// => @media (max-width: 639px) { ... }
+			boxShadow: {
+				boxShadowNav: '17px 6px 22px 7px rgba(0,0,0,0.4)'
+			},
 
-				'1xl': { min: '1439px' }
+			screens: {
+				smMax: { max: '639px' }
+				// => @media (max-width: 639px) { ... }
 			},
 
 			colors: {
