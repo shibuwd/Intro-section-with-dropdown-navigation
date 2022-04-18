@@ -17,3 +17,14 @@ let dropdown = document.querySelector('.dropdown');
 let arrow = document.querySelector('.arrow');
 
 console.log(dropdown);
+console.log(arrow);
+
+dropdown.addEventListener('click', () => {
+	dropdown.classList.toggle('dropdown-active');
+	arrow.classList.toggle('arrow-active');
+});
+
+// dropdown.addEventListener('click', () => {
+// 	dropDownCompany.classList.toggle('dropdown-active');
+// 	arrowCompany.classList.toggle('arrow-active');
+// });

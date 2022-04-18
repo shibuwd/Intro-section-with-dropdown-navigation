@@ -468,12 +468,50 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-sepia:  ;
 }
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
 .mobile-nav-toggle[aria-expanded="true"] {
   background-image: url('../img/icon-close-menu.svg');
 }
 
 .primary-navigation[data-visible="true"] {
   transform: translateX(0%);
+}
+
+.arrow-active {
+  transform: scaleY(-1);
 }
 
 .sr-only {
@@ -533,12 +571,32 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 1.8rem;
 }
 
+.w-screen {
+  width: 100vw;
+}
+
+.w-\[375px\] {
+  width: 375px;
+}
+
+.w-\[80px\] {
+  width: 80px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .flex-col {
   flex-direction: column;
 }
 
 .items-center {
   align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .justify-between {
@@ -549,8 +607,29 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 1rem;
 }
 
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.border-solid {
+  border-style: solid;
+}
+
 .border-none {
   border-style: none;
+}
+
+.border-almostBlack {
+  --tw-border-opacity: 1;
+  border-color: hsl(0 0% 8% / var(--tw-border-opacity));
 }
 
 .bg-almostWhite {
@@ -560,6 +639,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bg-transparent {
   background-color: transparent;
+}
+
+.bg-almostBlack {
+  --tw-bg-opacity: 1;
+  background-color: hsl(0 0% 8% / var(--tw-bg-opacity));
 }
 
 .bg-hamburger {
@@ -590,13 +674,43 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-repeat: no-repeat;
 }
 
-.p-6 {
-  padding: 1.5rem;
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
-.px-3 {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+.py-7 {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.py-11 {
+  padding-top: 2.75rem;
+  padding-bottom: 2.75rem;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.pt-8 {
+  padding-top: 2rem;
 }
 
 .pl-10 {
@@ -607,6 +721,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 0.75rem;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .font-Epilogue {
   font-family: Epilogue, sans-serif;
 }
@@ -615,8 +733,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 1rem;
 }
 
+.text-v2 {
+  font-size: 2.25rem;
+}
+
+.text-v5 {
+  font-size: 0.9375rem;
+}
+
+.text-v3 {
+  font-size: 1.125rem;
+}
+
 .font-fw500 {
   font-weight: 500;
+}
+
+.font-fw700 {
+  font-weight: 700;
 }
 
 .capitalize {
@@ -626,6 +760,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-almostBlack {
   --tw-text-opacity: 1;
   color: hsl(0 0% 8% / var(--tw-text-opacity));
+}
+
+.text-mediumGrey {
+  --tw-text-opacity: 1;
+  color: hsl(0 0% 41% / var(--tw-text-opacity));
+}
+
+.text-almostWhite {
+  --tw-text-opacity: 1;
+  color: hsl(0 0% 98% / var(--tw-text-opacity));
 }
 
 .shadow-boxShadowNav {
@@ -639,11 +783,49 @@ Ensure the default browser behavior of the `hidden` attribute.
   outline-offset: 2px;
 }
 
-/* @layer components {
-  .arrow-active {
-    transform: scaleY(-1);
-  }
-} */
+.duration-500 {
+  transition-duration: 500ms;
+}
+
+.ease-linear {
+  transition-timing-function: linear;
+}
+
+.hover\:border-2:hover {
+  border-width: 2px;
+}
+
+.hover\:bg-transparent:hover {
+  background-color: transparent;
+}
+
+.hover\:text-almostBlack:hover {
+  --tw-text-opacity: 1;
+  color: hsl(0 0% 8% / var(--tw-text-opacity));
+}
+
+.focus\:border-2:focus {
+  border-width: 2px;
+}
+
+.focus\:border-almostBlack:focus {
+  --tw-border-opacity: 1;
+  border-color: hsl(0 0% 8% / var(--tw-border-opacity));
+}
+
+.focus\:bg-transparent:focus {
+  background-color: transparent;
+}
+
+.focus\:text-mediumGrey:focus {
+  --tw-text-opacity: 1;
+  color: hsl(0 0% 41% / var(--tw-text-opacity));
+}
+
+.focus\:text-almostBlack:focus {
+  --tw-text-opacity: 1;
+  color: hsl(0 0% 8% / var(--tw-text-opacity));
+}
 
 @media (min-width: 640px) {
   .sm\:z-\[9999\] {
@@ -662,11 +844,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     gap: 2.5rem;
   }
 
-  .sm\:py-8 {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-
   .sm\:shadow-none {
     --tw-shadow: 0 0 #0000;
     --tw-shadow-colored: 0 0 #0000;
@@ -681,20 +858,56 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 1024px) {
-  .lg\:mr-\[18\%\] {
-    margin-right: 18%;
+  .lg\:ml-\[-16\%\] {
+    margin-left: -16%;
   }
 
-  .lg\:mr-5 {
-    margin-right: 1.25rem;
+  .lg\:mt-10 {
+    margin-top: 2.5rem;
   }
 
   .lg\:inline-block {
     display: inline-block;
   }
 
+  .lg\:flex {
+    display: flex;
+  }
+
+  .lg\:h-\[640px\] {
+    height: 640px;
+  }
+
+  .lg\:w-\[480px\] {
+    width: 480px;
+  }
+
+  .lg\:w-\[612px\] {
+    width: 612px;
+  }
+
   .lg\:cursor-pointer {
     cursor: pointer;
+  }
+
+  .lg\:flex-row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .lg\:items-start {
+    align-items: flex-start;
+  }
+
+  .lg\:items-center {
+    align-items: center;
+  }
+
+  .lg\:justify-between {
+    justify-content: space-between;
+  }
+
+  .lg\:gap-6 {
+    gap: 1.5rem;
   }
 
   .lg\:rounded-xl {
@@ -714,9 +927,8 @@ Ensure the default browser behavior of the `hidden` attribute.
     border-color: hsl(0 0% 8% / var(--tw-border-opacity));
   }
 
-  .lg\:bg-almostBlack {
-    --tw-bg-opacity: 1;
-    background-color: hsl(0 0% 8% / var(--tw-bg-opacity));
+  .lg\:bg-transparent {
+    background-color: transparent;
   }
 
   .lg\:px-5 {
@@ -734,12 +946,35 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-bottom: 0.75rem;
   }
 
+  .lg\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .lg\:py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .lg\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .lg\:text-left {
+    text-align: left;
+  }
+
   .lg\:font-Epilogue {
     font-family: Epilogue, sans-serif;
   }
 
   .lg\:text-v3 {
     font-size: 1.125rem;
+  }
+
+  .lg\:text-v1 {
+    font-size: 5rem;
   }
 
   .lg\:font-fw500 {
@@ -750,25 +985,17 @@ Ensure the default browser behavior of the `hidden` attribute.
     text-transform: capitalize;
   }
 
-  .lg\:text-almostWhite {
+  .lg\:leading-\[1\] {
+    line-height: 1;
+  }
+
+  .lg\:text-almostBlack {
     --tw-text-opacity: 1;
-    color: hsl(0 0% 98% / var(--tw-text-opacity));
+    color: hsl(0 0% 8% / var(--tw-text-opacity));
   }
 
   .lg\:duration-500 {
     transition-duration: 500ms;
-  }
-
-  .lg\:ease-in {
-    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
-  }
-
-  .lg\:ease-easeOutCirc {
-    transition-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
-  }
-
-  .lg\:ease-navEaseOut {
-    transition-timing-function: cubic-bezier(0.5, 1, 0.89, 1);
   }
 
   .lg\:ease-linear {
@@ -779,25 +1006,29 @@ Ensure the default browser behavior of the `hidden` attribute.
     border-width: 2px;
   }
 
-  .lg\:hover\:bg-transparent:hover {
-    background-color: transparent;
+  .lg\:hover\:bg-almostBlack:hover {
+    --tw-bg-opacity: 1;
+    background-color: hsl(0 0% 8% / var(--tw-bg-opacity));
   }
 
-  .lg\:hover\:text-almostBlack:hover {
+  .lg\:hover\:text-mediumGrey:hover {
     --tw-text-opacity: 1;
-    color: hsl(0 0% 8% / var(--tw-text-opacity));
+    color: hsl(0 0% 41% / var(--tw-text-opacity));
   }
 
-  .lg\:hover\:transition-opacity:hover {
-    transition-property: opacity;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms;
+  .lg\:hover\:text-almostWhite:hover {
+    --tw-text-opacity: 1;
+    color: hsl(0 0% 98% / var(--tw-text-opacity));
+  }
+
+  .lg\:hover\:ease-easeOutCirc:hover {
+    transition-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
   }
 }
 
 @media (min-width: 1280px) {
-  .xl\:mr-\[28\%\] {
-    margin-right: 28%;
+  .xl\:ml-\[-28\%\] {
+    margin-left: -28%;
   }
 }
 

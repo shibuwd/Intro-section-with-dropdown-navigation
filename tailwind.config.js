@@ -40,7 +40,9 @@ module.exports = {
 				todo: "url('../img/icon-todo.svg')",
 				calendar: "url('../img/icon-calendar.svg')",
 				reminders: "url('../img/icon-reminders.svg')",
-				planning: "url('../img/icon-planning.svg')"
+				planning: "url('../img/icon-planning.svg')",
+
+				clientsOne: "url('../img/client-databiz.svg')"
 			},
 
 			boxShadow: {
@@ -48,7 +50,8 @@ module.exports = {
 			},
 
 			screens: {
-				smMax: { max: '639px' }
+				smMax: { max: '639px' },
+				bigScreen: { max: '1440px' }
 				// => @media (max-width: 639px) { ... }
 			},
 

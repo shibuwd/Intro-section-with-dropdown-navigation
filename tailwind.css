@@ -21,8 +21,8 @@
   }
 }
 
-/* @layer components {
+@layer components {
   .arrow-active {
     transform: scaleY(-1);
   }
-} */
+}
