@@ -13,18 +13,24 @@ navToggle.addEventListener('click', () => {
 	}
 });
 
-let dropdown = document.querySelector('.dropdown');
-let arrow = document.querySelector('.arrow');
+// let dropdown = document.querySelectorAll('.dropdown');
+// let arrow = document.querySelectorAll('.arrow');
 
-console.log(dropdown);
-console.log(arrow);
+// console.log(dropdown);
+// console.log(arrow);
 
-dropdown.addEventListener('click', () => {
-	dropdown.classList.toggle('dropdown-active');
-	arrow.classList.toggle('arrow-active');
-});
+// for (let i = 0; i < dropdown.length; i++) {
+// 	dropdown[i].addEventListener('click', () => {
+// 		let focusFaqs = dropdown[i];
+// 		focusFaqs.classList.toggle('active');
+// 		arrow[i].classList.toggle('arrow-active');
 
-// dropdown.addEventListener('click', () => {
-// 	dropDownCompany.classList.toggle('dropdown-active');
-// 	arrowCompany.classList.toggle('arrow-active');
-// });
+// 		//    open FAQs answer when title container is clicked
+// 		let text = focusFaqs.nextElementSibling;
+// 		if (div.style.display === 'block') {
+// 			text.style.display = 'none';
+// 		} else {
+// 			text.style.display = 'block';
+// 		}
+// 	});
+// }
