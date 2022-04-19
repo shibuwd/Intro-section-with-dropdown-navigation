@@ -46,12 +46,14 @@ module.exports = {
 			},
 
 			boxShadow: {
-				boxShadowNav: '17px 6px 22px 7px rgba(0,0,0,0.4)'
+				boxShadowNav: '17px 6px 22px 7px rgba(0,0,0,0.4)',
+				boxShadowToggle: ' 0px 0px 8px 5px rgba(193, 193, 193, 0.25)'
 			},
 
 			screens: {
 				smMax: { max: '639px' },
-				bigScreen: { max: '1440px' }
+				bigScreen: { max: '1440px' },
+				smCustom: { min: '641px' }
 				// => @media (max-width: 639px) { ... }
 			},
 
