@@ -26,16 +26,3 @@
     transform: scaleY(-1);
   }
 }
-
-@layer components {
-  .dropdown.active-menu::before {
-    top: 22px;
-    transform: rotate(180deg);
-  }
-}
-
-@layer components {
-  .dropdown.active-menu .option {
-    display: inline-block;
-  }
-}
