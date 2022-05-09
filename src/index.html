@@ -39,7 +39,7 @@
             </button>
             <!-- end hamburger -->
 
-            <ul id="primary-navigation" data-visible="false" class="primary-navigation 
+            <ul id="primary-navigation" data-visible="false" class="primary-navigation relative
         
             flex flex-col bg-almostWhite text-almostBlack shadow-boxShadowNav
 
@@ -51,48 +51,98 @@
                 lg:ml-[-18%] xl:ml-[-45%]">
 
                 <!-- features menu -->
-                <li class="active">
-                    <a href="#" class=" relative font-Epilogue font-fw500 text-v4 outline-none
-                    sm:navHover lg:hover:text-mediumGrey
-                    lg:hover:ease-easeOutCirc focus:navHove
-                    focus:text-mediumGrey ">
-                        <div class="dropdown">
-                            <span class="flex items-center gap-4"
-                                aria-hidden="true">Features
-                                <img class="arrow" src="./img/icon-arrow-up.svg"
-                                    alt="">
-                            </span>
-                            <!-- dropdown menus with icon -->
-                            <!-- <div
-                                class="sm:shadow-boxShadowToggle smCustom:ml-[-5rem] smCustom:mt-3 ">
-                                <ul class="ml-7 smCustom:ml-0 smCustom:px-8 smCustom:py-2  
+                <li>
+                    <a href="#"
+                        class=" font-Epilogue font-fw500 text-v4 outline-none">
+                        <!-- dropdown menus with icon -->
+                        <div class="flex">
+                            <div @click.away="openSort = false" class="relative"
+                                x-data="{ openSort: false,sortType:'Features' }">
+                                <button @click="openSort = !openSort"
+                                    class="flex text-almostBlack items-center text-v4 font-fw500 font-Epilogue   bg-transparent rounded-lg ">
+                                    <span x-text="sortType"></span>
+                                    <svg fill="currentColor" viewBox="0 0 20 20"
+                                        :class="{'rotate-180': openSort, 'rotate-0': !openSort}"
+                                        class="w-4 h-4  transition-transform duration-200 transform ">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd">
+                                        </path>
+                                    </svg>
+                                </button>
+                                <div x-show="openSort"
+                                    x-transition:enter="transition ease-out duration-100"
+                                    x-transition:enter-start="transform opacity-0 scale-95"
+                                    x-transition:enter-end="transform opacity-100 scale-100"
+                                    x-transition:leave="transition ease-in duration-75"
+                                    x-transition:leave-start="transform opacity-100 scale-100"
+                                    x-transition:leave-end="transform opacity-0 scale-95"
+                                    class="absolute z-50 w-full  origin-top-right">
+                                    <div class=" w-40 mt-3 py-4 px-4 ml-text-center bg-almostWhite rounded-md sm:ml-[-80px] shadow-xl dark-mode:bg-gray-700 
                                         ">
-                                    <li
-                                        class="bg-todo bg-no-repeat bg-contain pl-10 my-5 capitalize">
-                                        <a href="#">todo list
-                                        </a>
-                                    </li>
+                                        <div class="flex flex-col">
+                                            <a @click="sortType='Todo List',openSort=!openSort"
+                                                x-show="sortType != ''"
+                                                class="flex flex-row items-start rounded-lg bg-transparent p-2 hover:bg-gray-200 "
+                                                href="#">
 
-                                    <li
-                                        class="bg-calendar bg-no-repeat bg-contain pl-10 my-5 capitalize ">
-                                        <a href="#">calendar
-                                        </a>
-                                    </li>
+                                                <div
+                                                    class="flex items-center flex-row-reverse">
+                                                    <p
+                                                        class="font-semibold ml-4 ">
+                                                        Todo List</p>
+                                                    <img src="./img/icon-todo.svg"
+                                                        alt="">
+                                                </div>
+                                            </a>
 
-                                    <li
-                                        class="bg-reminders bg-no-repeat bg-contain pl-10 my-5 capitalize ">
-                                        <a href="#">reminders
-                                        </a>
-                                    </li>
+                                            <a @click="sortType='Calendar',openSort=!openSort"
+                                                x-show="sortType != ''"
+                                                class="flex flex-row items-start rounded-lg bg-transparent p-2 hover:bg-gray-200 "
+                                                href="#">
+                                                <div
+                                                    class="flex items-center flex-row-reverse">
+                                                    <p
+                                                        class="font-semibold ml-4 ">
+                                                        Calendar</p>
+                                                    <img src="./img/icon-calendar.svg"
+                                                        alt="">
+                                                </div>
+                                            </a>
 
-                                    <li
-                                        class="bg-planning bg-no-repeat bg-contain pl-10 my-5 capitalize ">
-                                        <a href="#">planning
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div> -->
-                            <!-- end dropdown menus with icon-->
+                                            <a @click="sortType='Reminders',openSort=!openSort"
+                                                x-show="sortType != ''"
+                                                class="flex flex-row items-start rounded-lg bg-transparent p-2 hover:bg-gray-200 "
+                                                href="#">
+
+                                                <div
+                                                    class="flex items-center flex-row-reverse">
+                                                    <p
+                                                        class="font-semibold ml-4 ">
+                                                        Reminders</p>
+                                                    <img src="./img/icon-reminders.svg"
+                                                        alt="">
+                                                </div>
+                                            </a>
+
+                                            <a @click="sortType='Planning',openSort=!openSort"
+                                                x-show="sortType != ''"
+                                                class="flex flex-row items-start rounded-lg bg-transparent p-2 hover:bg-gray-200 "
+                                                href="#">
+
+                                                <div
+                                                    class="flex items-center flex-row-reverse">
+                                                    <p
+                                                        class="font-semibold ml-4 ">
+                                                        Planning</p>
+                                                    <img src="./img/icon-planning.svg"
+                                                        alt="">
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </a>
                 </li>
@@ -105,36 +155,77 @@
                      sm:navHover lg:hover:text-mediumGrey
                      lg:hover:ease-easeOutCirc focus:navHove
                      focus:text-mediumGrey">
-                        <span class="flex items-center gap-4"
-                            aria-hidden="true">Company
-                            <img src="./img/icon-arrow-up.svg" alt="">
-                        </span>
-
                         <!-- dropdown menus without icon -->
-                        <!-- <div>
-                            <ul class="ml-7">
-                                <li class=" pl-3 my-5 capitalize">
-                                    <a href="#"> history
-                                    </a>
-                                </li>
+                        <div class="flex">
+                            <div @click.away="openSort = false" class="relative"
+                                x-data="{ openSort: false,sortType:'Company' }">
+                                <button @click="openSort = !openSort"
+                                    class="flex text-almostBlack items-center text-v4 font-fw500 font-Epilogue   bg-transparent rounded-lg ">
+                                    <span x-text="sortType"></span>
+                                    <svg fill="currentColor" viewBox="0 0 20 20"
+                                        :class="{'rotate-180': openSort, 'rotate-0': !openSort}"
+                                        class="w-4 h-4  transition-transform duration-200 transform ">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd">
+                                        </path>
+                                    </svg>
+                                </button>
+                                <div x-show="openSort"
+                                    x-transition:enter="transition ease-out duration-100"
+                                    x-transition:enter-start="transform opacity-0 scale-95"
+                                    x-transition:enter-end="transform opacity-100 scale-100"
+                                    x-transition:leave="transition ease-in duration-75"
+                                    x-transition:leave-start="transform opacity-100 scale-100"
+                                    x-transition:leave-end="transform opacity-0 scale-95"
+                                    class="absolute z-50 w-full  origin-top-right">
+                                    <div class=" w-40 mt-3-4 ml-text-center bg-almostWhite rounded-md sm:ml-[-70px] shadow-xl dark-mode:bg-gray-700 
+                                        ">
+                                        <div class="flex flex-col">
+                                            <a @click="sortType='History',openSort=!openSort"
+                                                x-show="sortType != ''"
+                                                class="flex flex-row items-start rounded-lg bg-transparent p-2 hover:bg-gray-200 "
+                                                href="#">
 
-                                <li class=" pl-3 my-5 capitalize ">
-                                    <a href="#">our team
-                                    </a>
-                                </li>
+                                                <div
+                                                    class="flex items-center flex-row-reverse">
+                                                    <p
+                                                        class="font-semibold ml-4 ">
+                                                        History</p>
+                                                </div>
+                                            </a>
 
-                                <li class=" pl-3 my-5 capitalize ">
-                                    <a href="#">blog
-                                    </a>
-                                </li>
-                            </ul>
-                        </div> -->
-                        <!-- end dropdown menus without icon -->
-                    </a>
-                </li>
-                <!-- end company menu -->
+                                            <a @click="sortType='Our page',openSort=!openSort"
+                                                x-show="sortType != ''"
+                                                class="flex flex-row items-start rounded-lg bg-transparent p-2 hover:bg-gray-200 "
+                                                href="#">
+                                                <div
+                                                    class="flex items-center flex-row-reverse">
+                                                    <p
+                                                        class="font-semibold ml-4 ">
+                                                        Our page
+                                                    </p>
+                                                </div>
+                                            </a>
 
-                <!-- careers menu -->
+                                            <a @click="sortType='Blog',openSort=!openSort"
+                                                x-show="sortType != ''"
+                                                class="flex flex-row items-start rounded-lg bg-transparent p-2 hover:bg-gray-200 "
+                                                href="#">
+
+                                                <div
+                                                    class="flex items-center flex-row-reverse">
+                                                    <p
+                                                        class="font-semibold ml-4 ">
+                                                        Blog
+                                                    </p>
+                                                </div>
+                                            </a>
+
+
+                                            <!-- end company menu -->
+
+                                            <!-- careers menu -->
                 <li>
                     <a href="#" class=" relative font-Epilogue
                      font-fw500 text-v11 outline-none 
@@ -226,19 +317,29 @@
                     focus:text-almostBlack" href="#">register</a>
                 </button>
 
+                <ul class=" clients flex items-center justify-center gap-3
+                    py-5 px-2 lg:mt-10 lg:gap-6">
 
-                <div class=" clients flex items-center justify-center gap-3 py-5
-                    px-2 lg:mt-10 lg:gap-6 ">
-                    <img class=" w-[80px] lg:px-0 "
-                        src="./img/client-databiz.svg" alt="">
-                    <img class=" w-[80px] lg:px-0 "
-                        src="./img/client-audiophile.svg" alt="">
-                    <img class=" w-[80px] lg:px-0 " src="./img/client-meet.svg"
-                        alt="">
-                    <img class=" w-[80px] lg:px-0 " src="./img/client-maker.svg"
-                        alt="">
-                </div>
+                    <li>
+                        <img class=" w-[80px] lg:px-0 "
+                            src="./img/client-databiz.svg" alt="">
+                    </li>
 
+                    <li>
+                        <img class=" w-[80px] lg:px-0 "
+                            src="./img/client-audiophile.svg" alt="">
+                    </li>
+
+                    <li>
+                        <img class=" w-[80px] lg:px-0 "
+                            src="./img/client-meet.svg" alt="">
+                    </li>
+
+                    <li>
+                        <img class=" w-[80px] lg:px-0 "
+                            src="./img/client-maker.svg" alt="">
+                    </li>
+                </ul>
             </div>
         </div>
     </main>
@@ -246,6 +347,7 @@
 
     <!-- javascript file -->
     <script src=" ./js/app.js"> </script>
+    <script src="//unpkg.com/alpinejs" defer></script>
 </body>
 
 </html>
