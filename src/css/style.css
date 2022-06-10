@@ -508,11 +508,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
-.mobile-nav-toggle[aria-expanded="true"] {
+.mobile-nav-toggle[aria-expanded='true'] {
   background-image: url('../img/icon-close-menu.svg');
 }
 
-.primary-navigation[data-visible="true"] {
+.primary-navigation[data-visible='true'] {
   transform: translateX(0%);
 }
 
@@ -548,16 +548,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   z-index: 9999;
 }
 
-.z-50 {
-  z-index: 50;
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .mt-3 {
   margin-top: 0.75rem;
 }
 
-.ml-4 {
-  margin-left: 1rem;
+.mr-4 {
+  margin-right: 1rem;
+}
+
+.mt-\[74px\] {
+  margin-top: 74px;
 }
 
 .flex {
@@ -572,24 +577,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   aspect-ratio: 1 / 1;
 }
 
-.h-4 {
-  height: 1rem;
-}
-
 .w-\[1\.8rem\] {
   width: 1.8rem;
 }
 
-.w-4 {
-  width: 1rem;
+.w-\[150px\] {
+  width: 150px;
 }
 
-.w-full {
-  width: 100%;
-}
-
-.w-40 {
-  width: 10rem;
+.w-\[120px\] {
+  width: 120px;
 }
 
 .w-screen {
@@ -600,54 +597,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 80px;
 }
 
-.origin-top-right {
-  transform-origin: top right;
-}
-
-.rotate-180 {
-  --tw-rotate: 180deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.rotate-0 {
-  --tw-rotate: 0deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.scale-95 {
-  --tw-scale-x: .95;
-  --tw-scale-y: .95;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.scale-100 {
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.transform {
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .cursor-pointer {
   cursor: pointer;
 }
 
-.flex-row {
-  flex-direction: row;
-}
-
-.flex-row-reverse {
-  flex-direction: row-reverse;
-}
-
 .flex-col {
   flex-direction: column;
-}
-
-.items-start {
-  align-items: flex-start;
 }
 
 .items-center {
@@ -664,10 +619,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .gap-3 {
   gap: 0.75rem;
-}
-
-.rounded-lg {
-  border-radius: 0.5rem;
 }
 
 .rounded-md {
@@ -691,11 +642,13 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .border-almostBlack {
-  border-color: hsl(0, 0%, 8%);
+  --tw-border-opacity: 1;
+  border-color: hsl(0 0% 8% / var(--tw-border-opacity));
 }
 
 .bg-almostWhite {
-  background-color: hsl(0, 0%, 98%);
+  --tw-bg-opacity: 1;
+  background-color: hsl(0 0% 98% / var(--tw-bg-opacity));
 }
 
 .bg-transparent {
@@ -703,7 +656,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .bg-almostBlack {
-  background-color: hsl(0, 0%, 8%);
+  --tw-bg-opacity: 1;
+  background-color: hsl(0 0% 8% / var(--tw-bg-opacity));
 }
 
 .bg-hamburger {
@@ -714,23 +668,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-repeat: no-repeat;
 }
 
-.p-2 {
-  padding: 0.5rem;
-}
-
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
 
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .py-7 {
@@ -779,12 +724,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 1rem;
 }
 
-.text-v5 {
-  font-size: 0.9375rem;
-}
-
 .text-v2 {
   font-size: 2.25rem;
+}
+
+.text-v5 {
+  font-size: 0.9375rem;
 }
 
 .text-v3 {
@@ -804,23 +749,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .text-almostBlack {
-  color: hsl(0, 0%, 8%);
+  --tw-text-opacity: 1;
+  color: hsl(0 0% 8% / var(--tw-text-opacity));
 }
 
 .text-mediumGrey {
-  color: hsl(0, 0%, 41%);
+  --tw-text-opacity: 1;
+  color: hsl(0 0% 41% / var(--tw-text-opacity));
 }
 
 .text-almostWhite {
-  color: hsl(0, 0%, 98%);
-}
-
-.opacity-0 {
-  opacity: 0;
-}
-
-.opacity-100 {
-  opacity: 1;
+  --tw-text-opacity: 1;
+  color: hsl(0 0% 98% / var(--tw-text-opacity));
 }
 
 .shadow-boxShadowNav {
@@ -829,9 +769,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.shadow-xl {
-  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+.shadow-boxShadowToggle {
+  --tw-shadow:  0px 0px 8px 5px rgba(193, 193, 193, 0.25);
+  --tw-shadow-colored: 0px 0px 8px 5px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -840,46 +780,46 @@ Ensure the default browser behavior of the `hidden` attribute.
   outline-offset: 2px;
 }
 
-.transition-transform {
-  transition-property: transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.transition {
-  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.duration-200 {
-  transition-duration: 200ms;
-}
-
-.duration-100 {
-  transition-duration: 100ms;
-}
-
-.duration-75 {
-  transition-duration: 75ms;
-}
-
 .duration-500 {
   transition-duration: 500ms;
 }
 
-.ease-out {
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-}
-
-.ease-in {
-  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
-}
-
 .ease-linear {
   transition-timing-function: linear;
+}
+
+summary::marker {
+  color: transparent;
+}
+
+details[open] summary img {
+  transform: rotate(180deg);
+  transition: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+details[open] summary~* {
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-top {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(8px);
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(8px);
+  }
 }
 
 .hover\:border-2:hover {
@@ -887,7 +827,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .hover\:bg-gray-200:hover {
-  background-color: #e5e7eb;
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-transparent:hover {
@@ -895,7 +836,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .hover\:text-almostBlack:hover {
-  color: hsl(0, 0%, 8%);
+  --tw-text-opacity: 1;
+  color: hsl(0 0% 8% / var(--tw-text-opacity));
+}
+
+.hover\:ease-in-out:hover {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .focus\:border-2:focus {
@@ -903,7 +849,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .focus\:border-almostBlack:focus {
-  border-color: hsl(0, 0%, 8%);
+  --tw-border-opacity: 1;
+  border-color: hsl(0 0% 8% / var(--tw-border-opacity));
 }
 
 .focus\:bg-transparent:focus {
@@ -911,24 +858,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .focus\:text-mediumGrey:focus {
-  color: hsl(0, 0%, 41%);
+  --tw-text-opacity: 1;
+  color: hsl(0 0% 41% / var(--tw-text-opacity));
 }
 
 .focus\:text-almostBlack:focus {
-  color: hsl(0, 0%, 8%);
+  --tw-text-opacity: 1;
+  color: hsl(0 0% 8% / var(--tw-text-opacity));
 }
 
 @media (min-width: 640px) {
   .sm\:z-\[9999\] {
     z-index: 9999;
-  }
-
-  .sm\:ml-\[-80px\] {
-    margin-left: -80px;
-  }
-
-  .sm\:ml-\[-40px\] {
-    margin-left: -40px;
   }
 
   .sm\:hidden {
@@ -951,6 +892,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 768px) {
+  .md\:absolute {
+    position: absolute;
+  }
+
+  .md\:ml-\[-60px\] {
+    margin-left: -60px;
+  }
+
+  .md\:ml-\[-30px\] {
+    margin-left: -30px;
+  }
+
   .md\:hidden {
     display: none;
   }
@@ -1022,7 +975,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 
   .lg\:border-almostBlack {
-    border-color: hsl(0, 0%, 8%);
+    --tw-border-opacity: 1;
+    border-color: hsl(0 0% 8% / var(--tw-border-opacity));
   }
 
   .lg\:bg-transparent {
@@ -1088,7 +1042,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 
   .lg\:text-almostBlack {
-    color: hsl(0, 0%, 8%);
+    --tw-text-opacity: 1;
+    color: hsl(0 0% 8% / var(--tw-text-opacity));
   }
 
   .lg\:duration-500 {
@@ -1104,15 +1059,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 
   .lg\:hover\:bg-almostBlack:hover {
-    background-color: hsl(0, 0%, 8%);
+    --tw-bg-opacity: 1;
+    background-color: hsl(0 0% 8% / var(--tw-bg-opacity));
   }
 
   .lg\:hover\:text-mediumGrey:hover {
-    color: hsl(0, 0%, 41%);
+    --tw-text-opacity: 1;
+    color: hsl(0 0% 41% / var(--tw-text-opacity));
   }
 
   .lg\:hover\:text-almostWhite:hover {
-    color: hsl(0, 0%, 98%);
+    --tw-text-opacity: 1;
+    color: hsl(0 0% 98% / var(--tw-text-opacity));
   }
 
   .lg\:hover\:ease-easeOutCirc:hover {

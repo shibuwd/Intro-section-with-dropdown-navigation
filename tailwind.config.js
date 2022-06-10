@@ -1,5 +1,7 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: ['./src/**/*.{html,js}'],
+	content: ['./src/**/*.{html,js,jsx}'],
+
 	theme: {
 		extend: {
 			fontFamily: {
@@ -65,6 +67,19 @@ module.exports = {
 				almostBlack: 'hsl(0, 0%, 8%)'
 			}
 		}
+	},
+
+	// showing color in dev tools
+	corePlugins: {
+		backgroundOpacity: false
+	},
+	corePlugins: {
+		textOpacity: false,
+		backgroundOpacity: false,
+		borderOpacity: false,
+		divideOpacity: false,
+		placeholderOpacity: false,
+		ringOpacity: false
 	},
 
 	plugins: [require('@tailwindcss/typography')]

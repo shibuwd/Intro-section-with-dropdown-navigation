@@ -1,8 +1,8 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="shortcut icon" href="../src/img/favicon-32x32.png"
@@ -39,221 +39,100 @@
             </button>
             <!-- end hamburger -->
 
-            <ul id="primary-navigation" data-visible="false" class="primary-navigation relative
-        
-            flex flex-col bg-almostWhite text-almostBlack shadow-boxShadowNav
-
-                sm:flex-row sm:gap-[2.5rem] sm:shadow-none smMax:gap-6
-                smMax:fixed smMax:z-[10]
-                smMax:customInset smMax:pt-[25%] smMax:pl-[8%]
-                smMax:translate-x-full smMax:duration-700 smMax:ease-in-out
-                
-                lg:ml-[-18%] xl:ml-[-45%]">
+            <ul id="primary-navigation" data-visible="false"
+                class="primary-navigation relative flex flex-col bg-almostWhite text-almostBlack shadow-boxShadowNav sm:flex-row sm:gap-[2.5rem] sm:shadow-none smMax:gap-6 smMax:fixed 
+                smMax:z-[10] smMax:customInset smMax:pt-[25%] smMax:pl-[8%]
+                smMax:translate-x-full smMax:duration-700 smMax:ease-in-out lg:ml-[-18%] xl:ml-[-45%]">
 
                 <!-- features menu -->
                 <li>
                     <a href="#"
-                        class=" font-Epilogue font-fw500 text-v4 outline-none">
+                        class=" relative font-Epilogue font-fw500 text-v4 capitalize outline-none lg:hover:text-mediumGrey lg:hover:ease-easeOutCirc focus:navHover focus:text-mediumGrey">
                         <!-- dropdown menus with icon -->
-                        <div class="flex">
-                            <div @click.away="openSort = false"
-                                class="relative "
-                                x-data="{ openSort: false,sortType:'Features' }">
-                                <button @click="openSort = !openSort" class="flex text-almostBlack items-center
-                                    text-v4 font-fw500 font-Epilogue
-                                    bg-transparent rounded-lg
-                                    lg:hover:text-mediumGrey
-                                    lg:hover:ease-easeOutCirc focus:navHover
-                                    focus:text-mediumGrey">
-                                    <span x-text="sortType"></span>
-                                    <svg fill="currentColor" viewBox="0 0 20 20"
-                                        :class="{'rotate-180': openSort, 'rotate-0': !openSort}"
-                                        class="w-4 h-4  transition-transform duration-200 transform ">
-                                        <path fill-rule="evenodd"
-                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                            clip-rule="evenodd">
-                                        </path>
-                                    </svg>
-                                </button>
-                                <div x-show="openSort"
-                                    x-transition:enter="transition ease-out duration-100"
-                                    x-transition:enter-start="transform opacity-0 scale-95"
-                                    x-transition:enter-end="transform opacity-100 scale-100"
-                                    x-transition:leave="transition ease-in duration-75"
-                                    x-transition:leave-start="transform opacity-100 scale-100"
-                                    x-transition:leave-end="transform opacity-0 scale-95"
-                                    class="absolute z-50 w-full  origin-top-right">
-                                    <div class=" w-40 mt-3 py-4 px-4 ml-text-center bg-almostWhite rounded-md sm:ml-[-80px] shadow-xl dark-mode:bg-gray-700 
-                                        ">
-                                        <div class="flex flex-col">
-                                            <a @click="sortType='Todo List',openSort=!openSort"
-                                                x-show="sortType != ''"
-                                                class="flex flex-row items-start rounded-lg bg-transparent p-2 hover:bg-gray-200 "
-                                                href="#">
-
-                                                <div
-                                                    class="flex items-center flex-row-reverse">
-                                                    <p
-                                                        class=" font-Epilogue text-v5 font-fw500 ml-4 ">
-                                                        Todo List</p>
-                                                    <img src="./img/icon-todo.svg"
-                                                        alt="">
-                                                </div>
-                                            </a>
-
-                                            <a @click="sortType='Calendar',openSort=!openSort"
-                                                x-show="sortType != ''"
-                                                class="flex flex-row items-start rounded-lg bg-transparent p-2 hover:bg-gray-200 "
-                                                href="#">
-                                                <div
-                                                    class="flex items-center flex-row-reverse">
-                                                    <p class="font-Epilogue
-                                                        text-v5 font-fw500 ml-4
-                                                        ">
-                                                        Calendar</p>
-                                                    <img src="./img/icon-calendar.svg"
-                                                        alt="">
-                                                </div>
-                                            </a>
-
-                                            <a @click="sortType='Reminders',openSort=!openSort"
-                                                x-show="sortType != ''"
-                                                class="flex flex-row items-start rounded-lg bg-transparent p-2 hover:bg-gray-200 "
-                                                href="#">
-
-                                                <div
-                                                    class="flex items-center flex-row-reverse">
-                                                    <p class="font-Epilogue
-                                                        text-v5 font-fw500 ml-4
-                                                        ">
-                                                        Reminders</p>
-                                                    <img src="./img/icon-reminders.svg"
-                                                        alt="">
-                                                </div>
-                                            </a>
-
-                                            <a @click="sortType='Planning',openSort=!openSort"
-                                                x-show="sortType != ''"
-                                                class="flex flex-row items-start rounded-lg bg-transparent p-2 hover:bg-gray-200 "
-                                                href="#">
-
-                                                <div
-                                                    class="flex items-center flex-row-reverse">
-                                                    <p class="font-Epilogue
-                                                        text-v5 font-fw500 ml-4
-                                                        ">
-                                                        Planning</p>
-                                                    <img src="./img/icon-planning.svg"
-                                                        alt="">
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <details>
+                            <summary class=" relative bg-almostWhite cursor-pointer
+                                outline-none flex items-center">
+                                features <img class="mx-2"
+                                    src="./img/icon-arrow-down.svg" alt="">
+                            </summary>
+                            <ul
+                                class="wrapper shadow-boxShadowToggle mt-3 w-[150px] rounded-md md:ml-[-60px] md:absolute ">
+                                <li
+                                    class="flex items-center justify-center text-almostBlack cursor-pointer hover:bg-gray-200 py-2 hover:ease-in-out ">
+                                    <img class=" mr-4 "
+                                        src="./img/icon-todo.svg" alt="">todo
+                                    list
+                                </li>
+                                <li
+                                    class="flex items-center justify-center text-almostBlack cursor-pointer hover:bg-gray-200 py-2 hover:ease-in-out">
+                                    <img class="mr-4"
+                                        src="./img/icon-calendar.svg" alt="">
+                                    calendar
+                                </li>
+                                <li
+                                    class="flex items-center justify-center text-almostBlack cursor-pointer hover:bg-gray-200 py-2 hover:ease-in-out">
+                                    <img class="mr-4"
+                                        src="./img/icon-reminders.svg" alt="">
+                                    remindars
+                                </li>14
+                                <li
+                                    class="flex items-center justify-center text-almostBlack cursor-pointer hover:bg-gray-200 py-2 hover:ease-in-out">
+                                    <img class="mr-4"
+                                        src="./img/icon-planning.svg" alt="">
+                                    planning
+                                </li>
+                            </ul>
+                        </details>
                     </a>
                 </li>
                 <!-- end feature menu -->
 
                 <!-- company menu -->
                 <li>
-                    <a href="#" class="relative font-Epilogue
-                      font-fw500 text-v4 outline-none 
-                     sm:navHover lg:hover:text-mediumGrey
-                     lg:hover:ease-easeOutCirc focus:navHover
-                     focus:text-mediumGrey">
+                    <a href="#"
+                        class="relative capitalize font-Epilogue font-fw500 text-v4 outline-none sm:navHover lg:hover:text-mediumGrey lg:hover:ease-easeOutCirc focus:navHover focus:text-mediumGrey">
                         <!-- dropdown menus without icon -->
-                        <div class="flex">
-                            <div @click.away="openSort = false" class="relative"
-                                x-data="{ openSort: false,sortType:'Company' }">
-                                <button @click="openSort = !openSort" class="flex text-almostBlack items-center
-                                    text-v4 font-fw500 font-Epilogue
-                                    bg-transparent rounded-lg
-                                    lg:hover:text-mediumGrey
-                                    lg:hover:ease-easeOutCirc focus:navHover">
-                                    <span x-text="sortType"></span>
-                                    <svg fill="currentColor" viewBox="0 0 20 20"
-                                        :class="{'rotate-180': openSort, 'rotate-0': !openSort}"
-                                        class="w-4 h-4  transition-transform duration-200 transform ">
-                                        <path fill-rule="evenodd"
-                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                            clip-rule="evenodd">
-                                        </path>
-                                    </svg>
-                                </button>
-                                <div x-show="openSort"
-                                    x-transition:enter="transition ease-out duration-100"
-                                    x-transition:enter-start="transform opacity-0 scale-95"
-                                    x-transition:enter-end="transform opacity-100 scale-100"
-                                    x-transition:leave="transition ease-in duration-75"
-                                    x-transition:leave-start="transform opacity-100 scale-100"
-                                    x-transition:leave-end="transform opacity-0 scale-95"
-                                    class="absolute z-50 w-full origin-top-right">
-                                    <div class=" w-35 mt-3 text-center bg-almostWhite rounded-md sm:ml-[-40px] shadow-xl dark-mode:bg-gray-700 
-                                        ">
-                                        <div class="flex flex-col">
-                                            <a @click="sortType='History',openSort=!openSort"
-                                                x-show="sortType != ''"
-                                                class=" rounded-lg bg-transparent p-2 hover:bg-gray-200 "
-                                                href="#">
+                        <details>
+                            <summary class=" relative bg-almostWhite cursor-pointer
+                                outline-none flex items-center">
+                                features
+                                <img class="mx-2"
+                                    src="./img/icon-arrow-down.svg" alt="">
+                            </summary>
+                            <ul
+                                class="wrapper shadow-boxShadowToggle mt-3 w-[120px] rounded-md md:ml-[-30px] md:absolute ">
+                                <li
+                                    class="flex items-center justify-center text-almostBlack cursor-pointer hover:bg-gray-200 py-2 hover:ease-in-out ">
+                                    history
+                                </li>
+                                <li
+                                    class="flex items-center justify-center text-almostBlack cursor-pointer hover:bg-gray-200 py-2 hover:ease-in-out">
+                                    our team
+                                </li>
+                                <li
+                                    class="flex items-center justify-center text-almostBlack cursor-pointer hover:bg-gray-200 py-2 hover:ease-in-out">
+                                    blog
+                                </li>
+                            </ul>
+                        </details>
+                    </a>
+                </li>
+                <!-- end company menu -->
 
-                                                <div class="">
-                                                    <p
-                                                        class=" font-Epilogue font-fw500 text-v5 text-center ">
-                                                        History
-                                                    </p>
-                                                </div>
-                                            </a>
-
-                                            <a @click="sortType='Our page',openSort=!openSort"
-                                                x-show="sortType != ''"
-                                                class="rounded-lg bg-transparent p-2 hover:bg-gray-200 "
-                                                href="#">
-                                                <div class="">
-                                                    <p class="font-Epilogue
-                                                        font-fw500 text-v5
-                                                        text-center ">
-                                                        Our Page
-                                                    </p>
-                                                </div>
-                                            </a>
-
-                                            <a @click="sortType='Blog',openSort=!openSort"
-                                                x-show="sortType != ''"
-                                                class=" rounded-lg bg-transparent p-2 hover:bg-gray-200 "
-                                                href="#">
-
-                                                <div class="">
-                                                    <p class="font-Epilogue
-                                                        font-fw500 text-v5
-                                                        text-center ">
-                                                        Blog
-                                                    </p>
-                                                </div>
-                                            </a>
-
-                                            <!-- end company menu -->
-
-                                            <!-- careers menu -->
+                <!-- careers menu -->
                 <li>
-                    <a href="#" class=" relative font-Epilogue
-                     font-fw500 text-v11 outline-none 
-                      lg:hover:text-mediumGrey
-                     lg:hover:ease-easeOutCirc focus:navHover
-                     focus:text-mediumGrey">
-                        <span" aria-hidden="true"></span>Careers
+                    <a href="#" class="relative font-Epilogue font-fw500 text-v11 outline-none 
+                        lg:hover:text-mediumGrey lg:hover:ease-easeOutCirc focus:navHover 
+                        focus:text-mediumGrey">
+                        <span aria-hidden="true"></span>Careers
                     </a>
                 </li>
                 <!-- end careers menu -->
 
                 <!-- about menu -->
                 <li>
-                    <a href="#" class=" relative font-Epilogue
-                    font-fw500 text-v4 outline-none
-                    lg:hover:text-mediumGrey lg:hover:ease-easeOutCirc
-                    focus:navHove
-                    focus:text-mediumGrey">
+                    <a href="#"
+                        class=" relative font-Epilogue font-fw500 text-v4 outline-none lg:hover:text-mediumGrey lg:hover:ease-easeOutCirc focus:navHover focus:text-mediumGrey">
                         <span" aria-hidden="true"></span>About
                     </a>
                 </li>
@@ -265,23 +144,16 @@
         <div class="hidden md:hidden lg:inline-block">
 
             <button class="outline-none">
-                <a id="login-btn" class="outline-none lg:font-Epilogue lg:text-v3 lg:capitalize lg:hover:text-mediumGrey lg:hover:ease-easeOutCirc
-                    lg:font-fw500 lg:px-5 focus:navHover
-                    focus:text-mediumGrey" href="#">login
+                <a id="login-btn"
+                    class="outline-none lg:font-Epilogue lg:text-v3 lg:capitalize lg:hover:text-mediumGrey lg:hover:ease-easeOutCirc lg:font-fw500 lg:px-5 focus:navHover focus:text-mediumGrey"
+                    href="#">login
                 </a>
             </button>
 
             <button class="outline-none border-none">
-                <a class="lg:font-Epilogue lg:text-v3 lg:capitalize
-                    lg:font-fw500 lg:bg-transparent lg:text-almostBlack
-                    lg:border-solid lg:border-2 lg:border-almostBlack lg:px-8
-                    lg:py-3 lg:rounded-xl lg:cursor-pointer
-                    lg:hover:bg-almostBlack lg:hover:border-2
-                    lg:hover:text-almostWhite lg:ease-linear lg:duration-500
-
-                    focus:border-2 focus:border-almostBlack
-                    focus:bg-transparent
-                    focus:text-almostBlack" href="#">register
+                <a class="lg:font-Epilogue lg:text-v3 lg:capitalize lg:font-fw500 lg:bg-transparent lg:text-almostBlack lg:border-solid lg:border-2 lg:border-almostBlack lg:px-8 lg:py-3 lg:rounded-xl lg:cursor-pointer lg:hover:bg-almostBlack lg:hover:border-2 lg:hover:text-almostWhite lg:ease-linear lg:duration-500 focus:border-2 
+                focus:border-almostBlack focus:bg-transparent focus:text-almostBlack"
+                    href="#">register
                 </a>
             </button>
         </div>
@@ -289,11 +161,10 @@
     <!--end header section -->
 
     <!-- start main section -->
-    <main class="flex items-center justify-center">
+    <main class="flex items-center justify-center mt-[74px] ">
         <div
             class="container font-Epilogue text-center
-        lg:flex lg:flex-row-reverse lg:items-center lg:justify-between lg:px-6 lg:py-8">
-
+                lg:flex lg:flex-row-reverse lg:items-center lg:justify-between lg:px-6 lg:py-8">
             <div
                 class="hero-img-section py-7 w-screen lg:w-[480px] lg:h-[640px]">
                 <picture>
@@ -316,20 +187,13 @@
                 </p>
 
                 <button class="outline-none border-none py-11">
-                    <a class="font-Epilogue text-v3 capitalize
-                    font-fw500 bg-almostBlack text-almostWhite
-                    border-solid border-2 border-almostBlack px-8
-                    py-3 rounded-xl cursor-pointer
-                    hover:bg-transparent hover:border-2
-                    hover:text-almostBlack ease-linear duration-500
-
-                    focus:border-2 focus:border-almostBlack
-                    focus:bg-transparent
-                    focus:text-almostBlack" href="#">register</a>
+                    <a class="font-Epilogue text-v3 capitalize font-fw500 bg-almostBlack text-almostWhite border-solid border-2 border-almostBlack px-8 py-3 rounded-xl cursor-pointer
+                    hover:bg-transparent hover:border-2 hover:text-almostBlack ease-linear duration-500 focus:border-2 focus:border-almostBlack focus:bg-transparent focus:text-almostBlack"
+                        href="#">register</a>
                 </button>
 
-                <ul class=" clients flex items-center justify-center gap-3
-                    py-5 px-2 lg:mt-10 lg:gap-6">
+                <ul
+                    class=" clients flex items-center justify-center gap-3 py-5 px-2 lg:mt-10 lg:gap-6">
 
                     <li>
                         <img class=" w-[80px] lg:px-0 "
@@ -358,7 +222,6 @@
 
     <!-- javascript file -->
     <script src=" ./js/app.js"> </script>
-    <script src="//unpkg.com/alpinejs" defer></script>
 </body>
 
 </html>
