@@ -642,11 +642,13 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .border-almostBlack {
-  border-color: hsl(0, 0%, 8%);
+  --tw-border-opacity: 1;
+  border-color: hsl(0 0% 8% / var(--tw-border-opacity));
 }
 
 .bg-almostWhite {
-  background-color: hsl(0, 0%, 98%);
+  --tw-bg-opacity: 1;
+  background-color: hsl(0 0% 98% / var(--tw-bg-opacity));
 }
 
 .bg-transparent {
@@ -654,7 +656,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .bg-almostBlack {
-  background-color: hsl(0, 0%, 8%);
+  --tw-bg-opacity: 1;
+  background-color: hsl(0 0% 8% / var(--tw-bg-opacity));
 }
 
 .bg-hamburger {
@@ -746,15 +749,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .text-almostBlack {
-  color: hsl(0, 0%, 8%);
+  --tw-text-opacity: 1;
+  color: hsl(0 0% 8% / var(--tw-text-opacity));
 }
 
 .text-mediumGrey {
-  color: hsl(0, 0%, 41%);
+  --tw-text-opacity: 1;
+  color: hsl(0 0% 41% / var(--tw-text-opacity));
 }
 
 .text-almostWhite {
-  color: hsl(0, 0%, 98%);
+  --tw-text-opacity: 1;
+  color: hsl(0 0% 98% / var(--tw-text-opacity));
 }
 
 .shadow-boxShadowNav {
@@ -821,7 +827,8 @@ details[open] summary~* {
 }
 
 .hover\:bg-gray-200:hover {
-  background-color: #e5e7eb;
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-transparent:hover {
@@ -829,7 +836,8 @@ details[open] summary~* {
 }
 
 .hover\:text-almostBlack:hover {
-  color: hsl(0, 0%, 8%);
+  --tw-text-opacity: 1;
+  color: hsl(0 0% 8% / var(--tw-text-opacity));
 }
 
 .hover\:ease-in-out:hover {
@@ -841,7 +849,8 @@ details[open] summary~* {
 }
 
 .focus\:border-almostBlack:focus {
-  border-color: hsl(0, 0%, 8%);
+  --tw-border-opacity: 1;
+  border-color: hsl(0 0% 8% / var(--tw-border-opacity));
 }
 
 .focus\:bg-transparent:focus {
@@ -849,11 +858,13 @@ details[open] summary~* {
 }
 
 .focus\:text-mediumGrey:focus {
-  color: hsl(0, 0%, 41%);
+  --tw-text-opacity: 1;
+  color: hsl(0 0% 41% / var(--tw-text-opacity));
 }
 
 .focus\:text-almostBlack:focus {
-  color: hsl(0, 0%, 8%);
+  --tw-text-opacity: 1;
+  color: hsl(0 0% 8% / var(--tw-text-opacity));
 }
 
 @media (min-width: 640px) {
@@ -964,7 +975,8 @@ details[open] summary~* {
   }
 
   .lg\:border-almostBlack {
-    border-color: hsl(0, 0%, 8%);
+    --tw-border-opacity: 1;
+    border-color: hsl(0 0% 8% / var(--tw-border-opacity));
   }
 
   .lg\:bg-transparent {
@@ -1030,7 +1042,8 @@ details[open] summary~* {
   }
 
   .lg\:text-almostBlack {
-    color: hsl(0, 0%, 8%);
+    --tw-text-opacity: 1;
+    color: hsl(0 0% 8% / var(--tw-text-opacity));
   }
 
   .lg\:duration-500 {
@@ -1046,15 +1059,18 @@ details[open] summary~* {
   }
 
   .lg\:hover\:bg-almostBlack:hover {
-    background-color: hsl(0, 0%, 8%);
+    --tw-bg-opacity: 1;
+    background-color: hsl(0 0% 8% / var(--tw-bg-opacity));
   }
 
   .lg\:hover\:text-mediumGrey:hover {
-    color: hsl(0, 0%, 41%);
+    --tw-text-opacity: 1;
+    color: hsl(0 0% 41% / var(--tw-text-opacity));
   }
 
   .lg\:hover\:text-almostWhite:hover {
-    color: hsl(0, 0%, 98%);
+    --tw-text-opacity: 1;
+    color: hsl(0 0% 98% / var(--tw-text-opacity));
   }
 
   .lg\:hover\:ease-easeOutCirc:hover {
