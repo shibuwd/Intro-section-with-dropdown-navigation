@@ -5,7 +5,7 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				//using custom font familly.
+				//using custom font family.
 				Epilogue: ['Epilogue', 'sans-serif']
 			},
 
@@ -70,9 +70,6 @@ module.exports = {
 	},
 
 	// showing color in dev tools
-	corePlugins: {
-		backgroundOpacity: false
-	},
 	corePlugins: {
 		textOpacity: false,
 		backgroundOpacity: false,
